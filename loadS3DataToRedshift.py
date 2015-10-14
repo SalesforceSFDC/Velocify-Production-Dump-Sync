@@ -42,13 +42,13 @@ def backupProdTables():
 	cursor.execute("insert into distributionlog_qa select * from distributionlog");
 	print "distributionlog copied";
 	cursor.execute("insert into exportlog_qa select * from exportlog");
-	##print "exportlog copied";
+	print "exportlog copied";
 	cursor.execute("insert into emaillog_qa select * from emaillog");
 	print "emaillog copied";
 	cursor.execute("insert into leads_qa select * from leads");
 	print "leads copied";
-	#cursor.execute("insert into statuslog_qa select * from statuslog");
-	#print "statuslog copied";
+	cursor.execute("insert into statuslog_qa select * from statuslog");
+	print "statuslog copied";
 	print "Production tables copied.";
 	conn.commit();
 
