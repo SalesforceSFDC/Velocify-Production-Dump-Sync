@@ -67,21 +67,6 @@ def deleteProdTables():
 
 def copyProdTablesFromS3():
 	cursor = conn.cursor();
-	cursor.execute("copy actionlog from 's3://velocifynightlydata/leadsData/actionLogCSV.csv' credentials 'aws_access_key_id=AKIAJY6WJ33AJHCQ2BKA;aws_secret_access_key=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' timeformat 'MM/DD/YYYY HH24:MI:SS' dateformat 'MM/DD/YYYY' csv quote as '<' ACCEPTINVCHARS;");
-	print "actionlog copied to redshift";
-	cursor.execute("copy assignmentlog from 's3://velocifynightlydata/leadsData/assignmentLogCSV.csv' credentials 'aws_access_key_id=AKIAJY6WJ33AJHCQ2BKA;aws_secret_access_key=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' timeformat 'MM/DD/YYYY HH24:MI:SS' dateformat 'MM/DD/YYYY' csv quote as '^' ACCEPTINVCHARS;");
-	print "assignmentlog copied to redshift";
-	cursor.execute("copy creationlog from 's3://velocifynightlydata/leadsData/creationLogCSV.csv' credentials 'aws_access_key_id=AKIAJY6WJ33AJHCQ2BKA;aws_secret_access_key=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' timeformat 'MM/DD/YYYY HH24:MI:SS' dateformat 'MM/DD/YYYY' csv quote as '^' ACCEPTINVCHARS;");
-	print "creationlog copied to redshift";
-	cursor.execute("copy distributionlog from 's3://velocifynightlydata/leadsData/distributionLogCSV.csv' credentials 'aws_access_key_id=AKIAJY6WJ33AJHCQ2BKA;aws_secret_access_key=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' timeformat 'MM/DD/YYYY HH24:MI:SS' dateformat 'MM/DD/YYYY' csv quote as '^' ACCEPTINVCHARS;");
-	print "distributionlog copied to redshift";
-	cursor.execute("copy exportlog from 's3://velocifynightlydata/leadsData/exportLogCSV.csv' credentials 'aws_access_key_id=AKIAJY6WJ33AJHCQ2BKA;aws_secret_access_key=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' timeformat 'MM/DD/YYYY HH24:MI:SS' dateformat 'MM/DD/YYYY' csv quote as '^' ACCEPTINVCHARS;");
-	print "exportlog copied to redshift";
-	cursor.execute("copy emaillog from 's3://velocifynightlydata/leadsData/emailLogCSV.csv' credentials 'aws_access_key_id=AKIAJY6WJ33AJHCQ2BKA;aws_secret_access_key=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' timeformat 'MM/DD/YYYY HH24:MI:SS' dateformat 'MM/DD/YYYY' csv quote as '^' ACCEPTINVCHARS;");
-	print "emaillog copied to redshift";
-	cursor.execute("copy leads from 's3://velocifynightlydata/leadsData/leadsCSV.csv' credentials 'aws_access_key_id=AKIAJY6WJ33AJHCQ2BKA;aws_secret_access_key=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' timeformat 'MM/DD/YYYY HH24:MI:SS' dateformat 'MM/DD/YYYY' csv quote as '|' ACCEPTINVCHARS;");
-	print "leads copied to redshift";
-	cursor.execute("copy statuslog from 's3://velocifynightlydata/leadsData/statusLogCSV.csv' credentials 'aws_access_key_id=AKIAJY6WJ33AJHCQ2BKA;aws_secret_access_key=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' timeformat 'MM/DD/YYYY HH24:MI:SS' dateformat 'MM/DD/YYYY' csv quote as '^' ACCEPTINVCHARS;");
 	print "statuslog copied to redshift";
 	print "Production tables ready for use!!"
 
