@@ -13,7 +13,7 @@ import sys, traceback
 reload(sys);
 sys.setdefaultencoding("utf-8");
 now = datetime.datetime.now();
-url = "https://service.leads360.com/ClientService.asmx/GetLeadIds?username=abhardwaj@sunedison.com&password=F9nuvdgetu4?&from=01/01/2000&to=%s" %now.strftime("%m/%d/%Y");
+url = "https://service.leads360.com/ClientService.asmx/GetLeadIds?username=XXXX@sunedison.com&password=XXXX?&from=01/01/2000&to=%s" %now.strftime("%m/%d/%Y");
 print now.strftime("%m/%d/%Y");
 
 actionLogCSV = open('leadsData/actionLogCSV.csv','w');
@@ -32,7 +32,7 @@ def getLeadIds():
 		getLeadInfo(lead["@Id"]);
 
 def getLeadInfo(id):
-	urlForLeadInfo = "https://service.leads360.com/ClientService.asmx/GetLead?username=abhardwaj@sunedison.com&password=F9nuvdgetu4?&leadId=%s" %id;
+	urlForLeadInfo = "https://service.leads360.com/ClientService.asmx/GetLead?username=XXXX@sunedison.com&password=XXXX?&leadId=%s" %id;
 	r = requests.get(urlForLeadInfo);
 	output = xmltodict.parse(r.content);
 	if __name__ == '__main__':
